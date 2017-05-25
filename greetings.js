@@ -6,7 +6,7 @@ var namesGreeted = {};
 for (var i=0; i< namesGreeted.length; i++){
 }
 
-function displayInput() {
+function displayInput(){
     'use strict';
     var x = document.getElementById('elements').value;
     /*if the english radio button is checked and also if the length of the typed text is greater than zero -->*/
@@ -35,6 +35,8 @@ function displayInput() {
     /*the locStor.setItem stores the cyrrent Number of Greetings*/
     localStorage.setItem('currentNumberOfGreetings', num);
     //console.log(localStorage.getItem('currentNumberOfGreetings'))
+	
+	document.getElementById('me').innerHTML = displayInput();
 }
 
 var f = document.getElementById('dlt');
