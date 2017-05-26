@@ -1,9 +1,9 @@
-function displayInput(name, language) {
+function greetMessage(name, language) {
   if(language === "English"){
 	  return "Hello, " + name;
    }
 	
-   if(language === "IsiXHosa"){
+   if(language === "Isixhosa"){
 	return "Molo, " + name
    }
 	

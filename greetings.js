@@ -6,37 +6,59 @@ var namesGreeted = {};
 for (var i=0; i< namesGreeted.length; i++){
 }
 
+var checkLanguage = function(){
+	
+	 if(document.getElementById("English").checked === true){
+	return "English";
+    }
+	
+	 if(document.getElementById("Isixhosa").checked === true){
+	return "Isixhosa";
+    } 
+	
+	  if(document.getElementById("Afrikaans").checked === true){
+	return"Afrikaans";
+    }
+}
+
+ 
+
 function displayInput(){
     'use strict';
-    var x = document.getElementById('elements').value;
-    /*if the english radio button is checked and also if the length of the typed text is greater than zero -->*/
-    if (document.getElementById('English').checked === true && x.length > 0 && x !== " " && namesGreeted[x] === undefined) {
-        namesGreeted[x]=1;
-        /*>-- incremate my counter by one*/
-        num++;
-        /*>-- and display the incremetend number to my page*/
-        countbtn.innerHTML = 'Greets: ' + num;
-        /*Than display this greeting*/
-        document.getElementById('displayHere').innerHTML = "Good Day, " + document.getElementById('elements').value;
-        
-    } else if (document.getElementById('Isixhosa').checked === true && x.length > 0 && x !== " " && namesGreeted[x] === undefined) {
-        namesGreeted[x]=1;
-        num++;
-        countbtn.innerHTML = 'Greets: ' + num;
-        document.getElementById('displayHere').innerHTML = "Molo, " + document.getElementById('elements').value;
-    } else if (document.getElementById('Afrikaans').checked === true && x.length > 0 && x !== " " && namesGreeted[x] === undefined) {
-        namesGreeted[x]=1;
-        num++;
-        countbtn.innerHTML = 'Greets: ' + num;
-        document.getElementById('displayHere').innerHTML = "Goeie Dag, " + document.getElementById('elements').value;
-    }
-    /*after the greet me button is pressed the text box will clear*/
-    document.getElementById('elements').value = "";
-    /*the locStor.setItem stores the cyrrent Number of Greetings*/
-    localStorage.setItem('currentNumberOfGreetings', num);
-    //console.log(localStorage.getItem('currentNumberOfGreetings'))
+var name = document.getElementById('elements').value;
+var displayHere = document.getElementById('displayHere');
+ 
+	displayHere.innerHTML = greetMessage(name, checkLanguage());
 	
-	document.getElementById('me').innerHTML = displayInput();
+	
+//    /*if the english radio button is checked and also if the length of the typed text is greater than zero -->*/
+//    if (document.getElementById('English').checked === true && x.length > 0 && x !== " " && namesGreeted[x] === undefined) {
+//        namesGreeted[x]=1;
+//        /*>-- incremate my counter by one*/
+//        num++;
+//        /*>-- and display the incremetend number to my page*/
+//        countbtn.innerHTML = 'Greets: ' + num;
+//        /*Than display this greeting*/
+//        document.getElementById('displayHere').innerHTML = "Good Day, " + document.getElementById('elements').value;
+//        
+//    } else if (document.getElementById('Isixhosa').checked === true && x.length > 0 && x !== " " && namesGreeted[x] === undefined) {
+//        namesGreeted[x]=1;
+//        num++;
+//        countbtn.innerHTML = 'Greets: ' + num;
+//        document.getElementById('displayHere').innerHTML = "Molo, " + document.getElementById('elements').value;
+//    } else if (document.getElementById('Afrikaans').checked === true && x.length > 0 && x !== " " && namesGreeted[x] === undefined) {
+//        namesGreeted[x]=1;
+//        num++;
+//        countbtn.innerHTML = 'Greets: ' + num;
+//        document.getElementById('displayHere').innerHTML = "Goeie Dag, " + document.getElementById('elements').value;
+//    }
+//    /*after the greet me button is pressed the text box will clear*/
+//    document.getElementById('elements').value = "";
+//    /*the locStor.setItem stores the cyrrent Number of Greetings*/
+//    localStorage.setItem('currentNumberOfGreetings', num);
+//    //console.log(localStorage.getItem('currentNumberOfGreetings'))
+//	
+//document.getElementById('me').innerHTML = displayInput();
 }
 
 var f = document.getElementById('dlt');

@@ -1,6 +1,8 @@
 function dltcounter() {
     'use strict';
-    countbtn.innerHTML = 'Greets: ' + num;
-    localStorage.clear();
-    num = 0;
+	
+	if(localStorage.namesGreeted =>0){
+		return localStorage.namesGreeted = 0;
+	}
+	
 }
