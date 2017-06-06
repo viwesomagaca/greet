@@ -1,4 +1,5 @@
 function greetMessage(name, language) {
+	
   if(language === "English"){
 	  return "Hello, " + name;
    }
@@ -10,4 +11,7 @@ function greetMessage(name, language) {
     if(language === "Afrikaans"){
 	return "Hallo, " + name;
    }
+	if(language === undefined){
+		alert("Please select a language")
+	}
  }

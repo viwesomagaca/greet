@@ -1,74 +1,69 @@
-var countbtn = document.querySelector('#count');
-var num = localStorage.getItem('currentNumberOfGreetings');
-document.getElementById('count').innerHTML = 'Greets: ' + num;
-
-var namesGreeted = {};
-for (var i=0; i< namesGreeted.length; i++){
-}
+var displayOption = document.querySelector('#count');
+//var name = document.getElementById('elements').value;
 
 var checkLanguage = function(){
 	
-	 if(document.getElementById("English").checked === true){
-	return "English";
-    }
+	 if(document.getElementById("English").checked === true){ 
+	  return "English";   
+      }
 	
 	 if(document.getElementById("Isixhosa").checked === true){
 	return "Isixhosa";
-    } 
+	    } 
 	
 	  if(document.getElementById("Afrikaans").checked === true){
-	return"Afrikaans";
+	return "Afrikaans";
     }
 }
 
- 
+
+var instance = new countNames();
 
 function displayInput(){
     'use strict';
 var name = document.getElementById('elements').value;
-var displayHere = document.getElementById('displayHere');
- 
-	displayHere.innerHTML = greetMessage(name, checkLanguage());
+	console.log(name);
+var language = document.getElementsByName('language');
+	console.log(checkLanguage())
 	
+if(name.trim() ==="" || checkLanguage() === undefined){
+	alert("Please enter a Valid name");
+	return
+} else{
+	console.log(language.value);
+var displayHere = document.getElementById('displayHere');       
+displayHere.innerHTML = greetMessage(name, checkLanguage());
+}
+	document.getElementById('elements').value = "";
+	var instantNames = instance.clickCounter(name);
+	var instantGreets = instance.checkLength();
 	
-//    /*if the english radio button is checked and also if the length of the typed text is greater than zero -->*/
-//    if (document.getElementById('English').checked === true && x.length > 0 && x !== " " && namesGreeted[x] === undefined) {
-//        namesGreeted[x]=1;
-//        /*>-- incremate my counter by one*/
-//        num++;
-//        /*>-- and display the incremetend number to my page*/
-//        countbtn.innerHTML = 'Greets: ' + num;
-//        /*Than display this greeting*/
-//        document.getElementById('displayHere').innerHTML = "Good Day, " + document.getElementById('elements').value;
-//        
-//    } else if (document.getElementById('Isixhosa').checked === true && x.length > 0 && x !== " " && namesGreeted[x] === undefined) {
-//        namesGreeted[x]=1;
-//        num++;
-//        countbtn.innerHTML = 'Greets: ' + num;
-//        document.getElementById('displayHere').innerHTML = "Molo, " + document.getElementById('elements').value;
-//    } else if (document.getElementById('Afrikaans').checked === true && x.length > 0 && x !== " " && namesGreeted[x] === undefined) {
-//        namesGreeted[x]=1;
-//        num++;
-//        countbtn.innerHTML = 'Greets: ' + num;
-//        document.getElementById('displayHere').innerHTML = "Goeie Dag, " + document.getElementById('elements').value;
-//    }
-//    /*after the greet me button is pressed the text box will clear*/
-//    document.getElementById('elements').value = "";
-//    /*the locStor.setItem stores the cyrrent Number of Greetings*/
-//    localStorage.setItem('currentNumberOfGreetings', num);
-//    //console.log(localStorage.getItem('currentNumberOfGreetings'))
-//	
-//document.getElementById('me').innerHTML = displayInput();
+	for(var i = 0, len = localStorage.length; i < len; i++){
+		if(localStorage.getItem('instantGreets' +1) == instantGreets){
+			break;
+		} else{
+			localStorage.setItem("instantGreets", instantGreets)
+		}
+	}
+   displayOption.innerHTML = "NO. of Greets: " + instantGreets;
 }
 
-var f = document.getElementById('dlt');
-f.addEventListener('click', dltcounter);
+
+
+
 
 function dltcounter() {
     'use strict';
-    countbtn.innerHTML = 'Greets: ' + num;
+  'use strict';
+    displayOption.innerHTML = 'Greets: ' + instantGreets;
     localStorage.clear();
     num = 0;
 }
+
+var deleteCounter = document.getElementById('dlt');
+    deleteCounter.addEventListener('click', function(){
+	dltcounter();
+});
+
 
 
