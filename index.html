@@ -1,44 +1,50 @@
-
 <html>
-    <head>
-        <title> Greetings</title>
-        <link rel="stylesheet" type="text/css" href="greetings.css">
-        <link rel="stylesheet" type="text/css" href="names.doc">
-        <link rel="stylesheet" href="greet.css">    
-    </head>
 
-<body>
- 
-        
-        
-    <div id ="me" align="center">
-     <h1> GREETINGS !!!</h1>
-    </div>
-    
-       <div class="greet">
-           
-        <form name="firstname" action="index.html" method="post">
-           
-       <input  id="elements" type="text" value="" placeholder="TYPE YOUR NAME HERE!"> <br>
-            
-            
-           <h3 align="center">
-               <p id="count"> </p>
-          <input id="English" type="radio" name="language" value="Englsh">English
-          <input id="Isixhosa" type="radio" name="language" value="Isixhosa">IsiXhosa
-          <input id="Afrikaans" type="radio" name="language" value="Afrikaans"/>Afrikaans     
-         </h3> 
-            
-       <input id="btn" type="button" value="GREET ME" onclick="displayInput();"></button>
-           <input id="dlt" type="button" value="reset form" onclick="dltcounter();" ></button>
-          
+<head>
+  <title> Greetings</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css?family=Dancing+Script|Jim+Nightshade|Griffy|Playfair+Display|Kaushan+Script" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="greetings.css">
+</head>
 
+<body align="center">
+
+<div class="jumbotron">
+  <h1> GREETINGS !!!</h1>
+  </div>
+
+    <form name="firstname" action="index.html" method="post" align="center">
+  <div class="col-lg-3" align="center">
+    <input id="elements" type="text" class="form-control" placeholder="Please type in your name">
+     </div>
+<br>
+<br>
+
+<div class="center">
+  <br>
+  <br>
+
+          <input id="English" type="radio" name="language" value="Englsh">English &nbsp; &nbsp;
+          <input id="Isixhosa" type="radio" name="language" value="Isixhosa">IsiXhosa &nbsp; &nbsp;
+          <input id="Afrikaans" type="radio" name="language" value="Afrikaans"/>Afrikaans &nbsp; &nbsp;
+
+       </div>
+       <br>
+
+      <input id="btn" class="btn btn-primary btn-lg" type="button" value="Greet me" onclick="displayInput();">  &nbsp;
+      <input id="dlt" class="btn btn-primary btn-lg" type="button" value="reset form" onclick="dltcounter();">
+      <br>
+      <br>
+
+<div class="jumbotron" id="displayOutput">
+      <p id="count"> </p>
+      <hr>
       <p><span id="displayHere"></span></p>
-           </div>
-           </form>
-    </div>
-    </body>
+  </div>
+  </form>
+  </div>
+</body>
 <script src="greetings.js">
-
 </script>
+
 </html>
