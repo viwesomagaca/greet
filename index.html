@@ -2,49 +2,33 @@
 
 <head>
   <title> Greetings</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
 <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Jim+Nightshade|Griffy|Playfair+Display|Kaushan+Script" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="greetings.css">
 </head>
 
-<body align="center">
+<body>
 
 <div class="jumbotron">
-  <h1> GREETINGS !!!</h1>
-  </div>
-
-    <form name="firstname" action="index.html" method="post" align="center">
-  <div class="col-lg-3" align="center">
+ <div class="container">
+    <h1> Greet Me</h1>
+    <p>Please type in your name and select a language you wish to be greeted in </p>
     <input id="elements" type="text" class="form-control" placeholder="Please type in your name">
-     </div>
-<br>
-<br>
-
-<div class="center">
-  <br>
-  <br>
-
-          <input id="English" type="radio" name="language" value="Englsh">English &nbsp; &nbsp;
-          <input id="Isixhosa" type="radio" name="language" value="Isixhosa">IsiXhosa &nbsp; &nbsp;
-          <input id="Afrikaans" type="radio" name="language" value="Afrikaans"/>Afrikaans &nbsp; &nbsp;
-
+  
+       <div class="center">
+          <input class="radio-button" id="English" type="radio" name="language" value="Englsh">English &nbsp; &nbsp;
+          <input class="radio-button" id="Isixhosa" type="radio" name="language" value="Isixhosa">IsiXhosa &nbsp; &nbsp;
+          <input class="radio-button" id="Afrikaans" type="radio" name="language" value="Afrikaans"/>Afrikaans &nbsp; &nbsp;
        </div>
-       <br>
-
-      <input id="btn" class="btn btn-primary btn-lg" type="button" value="Greet me" onclick="displayInput();">  &nbsp;
-      <input id="dlt" class="btn btn-primary btn-lg" type="button" value="reset form" onclick="dltcounter();">
+      
+      <input id="btn" class="btn" type="button" value="Greet Me" onclick="displayInput();">  &nbsp;
+      <input id="dlt" class="btn" type="button" value="Reset Form" onclick="dltcounter();">
       <br>
-      <br>
-
-<div class="jumbotron" id="displayOutput">
-      <p id="count"> </p>
-      <hr>
-      <p><span id="displayHere"></span></p>
+      <p  class="display" id="displayHere"></p>
+      <p class="display" id="count"> </p>
   </div>
-  </form>
-  </div>
+</div>
 </body>
-<script src="greetings.js">
-</script>
+<script src="greetings.js"></script>
 
 </html>

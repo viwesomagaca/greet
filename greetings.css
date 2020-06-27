@@ -1,7 +1,32 @@
-h1{
-    font-size:100px ;
-    font-family: "Kaushan Script", cursive;
-    font-style: bold;
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('./Open_Sans/OpenSans-SemiBold.ttf');
+  font-weight: normal;
+
+}
+html,
+body {
+  background-color: aliceblue;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  top: 0;
+  font-size: 100%;
+  font-family: 'OpenSans';
+}
+
+.btn{
+  width: 157px;
+  height: 38px;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+*{
+  line-height: 1.5;
 }
 
 
@@ -11,15 +36,125 @@ h1{
 
 .center{
   font-family: "Playfair Display", cursive;
-  margin-left: 5em;
-  margin-right: 5em;
+  margin :24px 5em;
+}
+
+.jumbotron{
+  justify-content: center;
+  background-color: teal;
+  text-align: center;
+  height: 100%;
+  position: relative;
+  background-size: cover;
+}
+
+.container{
+  display: block !important;
+  background-color: lightgrey;
+  padding: 24px 0;
+  width: 90%;
+  position: relative;
+  left: 5%;
+  right: 0;
+  top: 32%;
+  bottom: 0;
+}
+
+.form-control{
+  height: 58px;
+  width: 300px;
+  text-align: center;
+  font-size: 17px;
+}
+
+.radio-button{
+  font-size: 18px;
 }
 
 #displayOutput{
   font-size: 16px;
+  width: 30%;
     font-family: "Playfair Display", cursive;
-    margin-left: 15em;
-    margin-right: 15em;
-    background-color: beige;
-
 }
+
+.display{
+  text-align: center;
+  background-color: beige;
+  width: 30%;
+  margin-left: 35%;
+  font-size: 18px;
+}
+
+@media only screen and (min-width:1024px) {
+
+.btn{
+  width: 157px;
+  height: 38px;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+h1{
+  font-family: "Kaushan Script", cursive;
+  margin: 0 !important;
+}
+
+
+.col-lg-3{
+  margin-left: 36em;
+}
+
+.center{
+  font-family: "Playfair Display", cursive;
+  margin :24px 5em;
+}
+
+.jumbotron{
+  justify-content: center;
+  background-color: teal;
+  text-align: center;
+  height: 50vh !important;
+  position: relative;
+  background-size: cover;
+  /* display: flex; */
+  /* background-image: url("./wood-background.jpg"); */
+}
+
+.container{
+  display: block !important;
+  background-color: lightgrey;
+  padding: 24px 0;
+  width: 60%;
+  position: relative;
+  left: 20%;
+  right: 0;
+  top: 33%;
+  bottom: 0;
+}
+
+.form-control{
+  height: 58px;
+  width: 300px;
+  text-align: center;
+  font-size: 17px;
+}
+
+.radio-button{
+  font-size: 18px;
+}
+
+#displayOutput{
+  font-size: 16px;
+  width: 30%;
+    font-family: "Playfair Display", cursive;
+}
+
+.display{
+  text-align: center;
+  background-color: beige;
+  width: 30%;
+  margin-left: 35%;
+  font-size: 18px;
+ }
+}
+
